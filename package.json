@@ -28,8 +28,7 @@
     "db:generate": "npx prisma generate",
     "db:studio": "npx prisma studio",
     "docs:serve": "docsify serve docs",
-    "prepare": "husky install",
-    "postinstall": "npm run db:generate"
+    "prepare": "husky install"
   },
   "keywords": [
     "ai",

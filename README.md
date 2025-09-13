@@ -2,809 +2,519 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/your-username/AI-Powered-BAAS)
-[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![Rust](https://img.shields.io/badge/rust-1.70+-orange.svg)](https://rustlang.org/)
+[![TypeScript](https://img.shields.io/badge/typescript-4.9+-blue.svg)](https://typescriptlang.org/)
 [![Node.js 18+](https://img.shields.io/badge/node.js-18+-green.svg)](https://nodejs.org/)
-[![Docker](https://img.shields.io/badge/docker-ready-blue.svg)](https://docker.com)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![React](https://img.shields.io/badge/react-18+-61DAFB.svg)](https://reactjs.org/)
 
-> 🚀 **The AI-First BaaS That Surpasses Firebase, AWS Amplify, and Supabase** - The only backend platform with native AI workflows, custom model training, and intelligent automation that scales from prototype to enterprise.
+> 🚀 **The AI-First BaaS Platform** - Built with Rust, React+TypeScript, Node.js, and Python, featuring native Gemini API integration and custom model training capabilities.
 
-## 🌟 Overview
+## 🌟 Tech Stack Overview
 
-**AI-Powered BaaS** is the first truly AI-native backend platform designed to surpass existing BaaS solutions like Firebase, AWS Amplify, and Supabase. While traditional BaaS platforms offer basic AI integrations as an afterthought, we've built AI capabilities from the ground up, providing developers with unparalleled intelligent backend services.
+### 🦀 **Rust Core Services** (Main Language)
+- **High-Performance Backend**: Rust-powered core services using Axum framework
+- **Memory Safety**: Zero-cost abstractions with guaranteed memory safety
+- **Concurrency**: Tokio async runtime for maximum performance
+- **API Gateway**: RESTful APIs with WebSocket support
 
-### 🎯 Vision Statement
+### ⚛️ **React + TypeScript Frontend**
+- **Modern UI**: React 18 with TypeScript for type-safe development
+- **Styling**: Tailwind CSS with custom white/black color scheme
+- **Animation**: Framer Motion for smooth, professional animations
+- **Real-time**: WebSocket integration for live AI processing
 
-*"To be the first AI-native BaaS platform that not only matches traditional backend services but revolutionizes them with intelligent automation, predictive scaling, and custom AI model deployment capabilities that make every application smarter by default."*
+### 🟢 **Node.js API Gateway**
+- **Express.js**: Fast, minimalist web framework
+- **Socket.io**: Real-time bidirectional communication
+- **Proxy Layer**: Routes requests between frontend and backend services
+- **WebSocket Hub**: Manages real-time AI processing notifications
 
-## 💡 Why Choose AI-Powered BaaS Over Competitors?
+### 🐍 **Python AI Services**
+- **Gemini API**: Native integration with Google's Gemini for NLP tasks
+- **FastAPI**: High-performance API framework for AI endpoints
+- **Custom Training**: Jupyter notebooks for model development
+- **Multiple Models**: Support for both cloud and custom-trained models
 
-### 🔥 **Unique Value Propositions**
-
-| Feature | AI-Powered BaaS | Firebase | AWS Amplify | Supabase |
-|---------|-----------------|----------|-------------|----------|
-| **Native AI Workflows** | ✅ Built-in | ❌ Basic ML Kit | ❌ Limited AI | ❌ Basic Vector DB |
-| **Custom Model Training** | ✅ Full Pipeline | ❌ No Training | ❌ External Only | ❌ No Training |
-| **Intelligent Scaling** | ✅ AI-Driven | ⚠️ Manual Config | ⚠️ Manual Config | ⚠️ Manual Config |
-| **Predictive Analytics** | ✅ Real-time | ❌ External Tools | ❌ External Tools | ❌ Limited |
-| **AI-Powered Security** | ✅ Behavioral Analysis | ⚠️ Basic Rules | ⚠️ Basic Rules | ⚠️ Basic Rules |
-| **Multi-Model Support** | ✅ 50+ Models | ❌ Limited | ❌ Limited | ❌ Vector Only |
-| **Edge AI Deployment** | ✅ Global CDN | ❌ No Edge AI | ❌ No Edge AI | ❌ No Edge AI |
-| **No-Code AI Pipelines** | ✅ Visual Builder | ❌ Code Required | ❌ Code Required | ❌ Code Required |
-
-### 🚫 **Competitor Limitations We Solve**
-
-#### **Firebase Limitations:**
-- **AI Afterthought**: ML Kit is basic, no custom training, limited models
-- **Vendor Lock-in**: Google Cloud only, proprietary APIs
-- **Unpredictable Costs**: Pay-as-you-go can become expensive at scale
-- **Limited Hosting**: Only GCP, no multi-cloud deployment
-- **Basic Real-time**: Simple updates, no AI-powered streams
-
-#### **AWS Amplify Limitations:**
-- **Complex AI Setup**: Requires deep AWS knowledge for AI features
-- **Fragmented Services**: AI scattered across multiple AWS services
-- **Enterprise Complexity**: Over-engineered for simple AI use cases
-- **No Custom Training**: External model training required
-- **Limited Real-time AI**: No real-time model inference
-
-#### **Supabase Limitations:**
-- **Vector-Only AI**: Limited to vector embeddings and search
-- **No Model Training**: Cannot train custom models
-- **Basic AI Features**: Only OpenAI integrations, no custom pipelines
-- **Limited Scaling**: Manual database scaling, no AI optimization
-- **Postgres-Centric**: Limited NoSQL and multi-model support
-
-## 🚀 **Advanced Differentiating Features**
-
-### 🧠 **1. Native AI Workflow Engine**
-```javascript
-// Create intelligent data processing pipelines with visual builder
-const pipeline = await aibaas.workflows.create({
-  name: "Smart Content Moderation",
-  triggers: ["content.uploaded"],
-  steps: [
-    { type: "ai.text-analysis", model: "toxicity-detector-v2" },
-    { type: "ai.image-analysis", model: "nsfw-classifier" },
-    { type: "database.update", collection: "content" },
-    { type: "notification.send", condition: "flagged" }
-  ],
-  ai_optimization: true
-});
-```
-
-### 🎯 **2. Custom Model Training Pipeline**
-```python
-# Train custom models directly in the platform
-training_job = await aibaas.ai.train_model({
-    "model_type": "text_classifier",
-    "dataset": "gs://my-bucket/training-data",
-    "base_model": "bert-base-uncased",
-    "target_accuracy": 0.95,
-    "auto_deploy": true,
-    "edge_optimization": true
-})
-```
-
-### 📊 **3. Intelligent Predictive Scaling**
-- **AI-Driven Resource Management**: Predict traffic spikes 24-48 hours in advance
-- **Smart Cost Optimization**: Automatically scale down during low usage periods
-- **Performance Predictions**: Machine learning models predict bottlenecks before they occur
-- **Anomaly Detection**: Real-time detection of unusual traffic patterns or security threats
-
-### 🔒 **4. AI-Powered Security & Compliance**
-```javascript
-// Behavioral security analysis with AI
-const security = await aibaas.security.configure({
-  behavioral_analysis: {
-    enabled: true,
-    anomaly_threshold: 0.85,
-    auto_block_suspicious: true
-  },
-  compliance: {
-    gdpr: true,
-    hipaa: true,
-    auto_anonymization: true
-  },
-  threat_detection: {
-    sql_injection: "ai_enhanced",
-    ddos_protection: "ml_based",
-    fraud_detection: "real_time"
-  }
-});
-```
-
-### 🌐 **5. Edge AI Deployment Network**
-- **Global AI Inference**: Deploy models to 100+ edge locations worldwide
-- **Sub-50ms Latency**: AI responses faster than traditional cloud calls
-- **Offline-First AI**: Models work without internet connectivity
-- **Progressive Enhancement**: Seamlessly upgrade from edge to cloud models
-
-### 🎨 **6. No-Code AI Pipeline Builder**
-```mermaid
-graph LR
-    A[Data Input] --> B[AI Processing]
-    B --> C[Business Logic]
-    C --> D[Actions]
-    
-    subgraph "Visual Builder"
-        B1[Text Analysis]
-        B2[Image Recognition]
-        B3[Sentiment Analysis]
-        B4[Custom Model]
-    end
-```
-
-### 🔄 **7. Real-Time AI Streams**
-```javascript
-// Real-time AI processing streams
-const stream = aibaas.streams.create({
-  source: "user_interactions",
-  processors: [
-    "ai.sentiment_analysis",
-    "ai.intent_detection",
-    "ai.personalization"
-  ],
-  real_time: true,
-  latency_target: "10ms"
-});
-
-stream.on('ai_result', (data) => {
-  // React to AI insights in real-time
-  console.log('AI Analysis:', data.sentiment, data.intent);
-});
-```
-
-### 🤖 **8. Multi-Model AI Ecosystem**
-- **50+ Pre-trained Models**: Ready-to-use for common tasks
-- **Model Marketplace**: Community-contributed and enterprise models
-- **A/B Test Models**: Compare model performance automatically
-- **Model Versioning**: Track, rollback, and manage model deployments
-- **Ensemble Learning**: Combine multiple models for better accuracy
-
-### 📈 **9. Intelligent Analytics & Insights**
-```javascript
-// AI-powered analytics that predict user behavior
-const insights = await aibaas.analytics.predict({
-  metric: "user_churn",
-  timeframe: "30_days",
-  confidence_level: 0.9,
-  actions: ["send_retention_campaign", "offer_discount"]
-});
-```
-
-### 🔧 **10. Smart Infrastructure Management**
-- **Auto-Healing Systems**: AI detects and fixes common issues automatically
-- **Predictive Maintenance**: Prevent downtime with ML-powered monitoring
-- **Resource Optimization**: AI automatically optimizes database queries and API performance
-- **Smart Caching**: ML determines optimal caching strategies per application
-
-## 📊 Platform Architecture
+## 📊 Advanced System Architecture
 
 ```mermaid
 graph TB
     subgraph "Client Layer"
-        WEB[Web Applications]
-        MOBILE[Mobile Apps]
-        SDK[SDKs & CLI]
+        WEB[React + TypeScript UI<br/>Tailwind CSS + Framer Motion]
+        MOBILE[Mobile Apps<br/>React Native]
     end
     
-    subgraph "API Gateway Layer"
-        GATEWAY[API Gateway]
-        AUTH[Authentication]
-        RATE[Rate Limiting]
-        MONITOR[Monitoring]
+    subgraph "API Gateway Layer - Node.js"
+        GATEWAY[Express.js Gateway<br/>Port 3001]
+        WS[Socket.io WebSocket<br/>Real-time Hub]
+        CORS[CORS Middleware]
     end
     
-    subgraph "Core Services Layer"
-        subgraph "AI Services"
-            NLP[NLP Engine]
-            CV[Computer Vision]
-            ML[ML Models]
-            PRED[Predictive Analytics]
-        end
-        
-        subgraph "Backend Services"
-            DB[Database Manager]
-            STORAGE[File Storage]
-            FUNC[Serverless Functions]
-            REAL[Real-time Services]
-        end
+    subgraph "Core Services Layer - Rust"
+        RUST_API[Axum REST API<br/>Port 8080]
+        RUST_WS[WebSocket Handler]
+        RUST_AUTH[Authentication]
+        RUST_DB[Database Manager]
     end
     
-    subgraph "Infrastructure Layer"
-        KUBE[Kubernetes Cluster]
-        DOCKER[Docker Containers]
-        QUEUE[Message Queues]
-        CACHE[Redis Cache]
+    subgraph "AI Services Layer - Python"
+        GEMINI[Gemini API Integration<br/>Port 8000]
+        CUSTOM[Custom Model Inference]
+        TRAINING[Model Training Pipeline]
+        FASTAPI[FastAPI Framework]
     end
     
     subgraph "Data Layer"
-        POSTGRES[(PostgreSQL)]
-        MONGO[(MongoDB)]
-        REDIS[(Redis)]
-        S3[(Object Storage)]
+        POSTGRES[(PostgreSQL<br/>Primary Database)]
+        REDIS[(Redis<br/>Cache & Sessions)]
+        S3[(Object Storage<br/>Files & Models)]
+    end
+    
+    subgraph "Development & Training"
+        JUPYTER[Jupyter Notebooks<br/>Model Training]
+        MLFLOW[MLflow<br/>Model Registry]
     end
     
     WEB --> GATEWAY
     MOBILE --> GATEWAY
-    SDK --> GATEWAY
+    GATEWAY --> WS
+    GATEWAY --> RUST_API
+    WS --> RUST_WS
     
-    GATEWAY --> AUTH
-    GATEWAY --> RATE
-    GATEWAY --> MONITOR
+    RUST_API --> RUST_AUTH
+    RUST_API --> RUST_DB
+    RUST_API --> GEMINI
     
-    AUTH --> NLP
-    AUTH --> CV
-    AUTH --> ML
-    AUTH --> PRED
-    AUTH --> DB
-    AUTH --> STORAGE
-    AUTH --> FUNC
-    AUTH --> REAL
+    GEMINI --> CUSTOM
+    CUSTOM --> TRAINING
     
-    NLP --> KUBE
-    CV --> KUBE
-    ML --> KUBE
-    PRED --> KUBE
-    DB --> KUBE
-    STORAGE --> KUBE
-    FUNC --> KUBE
-    REAL --> QUEUE
+    RUST_DB --> POSTGRES
+    RUST_AUTH --> REDIS
+    TRAINING --> S3
+    TRAINING --> JUPYTER
     
-    KUBE --> POSTGRES
-    KUBE --> MONGO
-    KUBE --> REDIS
-    KUBE --> S3
+    style WEB fill:#ffffff,stroke:#000000,stroke-width:2px
+    style RUST_API fill:#ce422b,stroke:#ffffff,stroke-width:2px,color:#ffffff
+    style GEMINI fill:#4285f4,stroke:#ffffff,stroke-width:2px,color:#ffffff
+    style GATEWAY fill:#68d391,stroke:#000000,stroke-width:2px
 ```
 
-## 🎨 Technology Stack
+## 🎨 UI Color Scheme
 
-### Frontend & Client SDKs
-- **React.js 18+** - Modern web applications
-- **React Native** - Cross-platform mobile development
-- **TypeScript** - Type-safe development
-- **Tailwind CSS** - Utility-first styling
+The interface uses a sophisticated **white and black** primary color palette:
 
-### Backend Services
-- **Node.js 18+** - Primary API server and real-time services
-- **Express.js** - Web framework
-- **Socket.io** - Real-time communication
-- **GraphQL** - Flexible API queries
+```css
+/* Primary Colors */
+--primary-50: #ffffff   /* Pure white backgrounds */
+--primary-100: #f8f9fa  /* Light gray backgrounds */
+--primary-200: #f1f3f4  /* Subtle borders */
+--primary-800: #202124  /* Dark text */
+--primary-900: #000000  /* Pure black accents */
 
-### AI/ML Services
-- **Python 3.9+** - AI model development and inference
-- **FastAPI** - High-performance AI API endpoints
-- **TensorFlow 2.x** - Deep learning models
-- **PyTorch** - Research and production ML models
-- **Hugging Face Transformers** - Pre-trained NLP models
-- **OpenCV** - Computer vision processing
-- **scikit-learn** - Traditional ML algorithms
+/* Interactive Elements */
+--accent-blue: #4285f4   /* Links and actions */
+--success-green: #34d399 /* Success states */
+--warning-amber: #fbbf24 /* Warnings */
+--error-red: #ef4444     /* Errors */
+```
 
-### Infrastructure & DevOps
-- **Docker & Kubernetes** - Containerization and orchestration
-- **Redis** - Caching and session management
-- **PostgreSQL** - Primary relational database
-- **MongoDB** - Document storage
-- **MinIO/S3** - Object storage
-- **Apache Kafka** - Event streaming
-- **Prometheus & Grafana** - Monitoring and observability
+## 🧠 AI Model Integration Flow
 
-## 🧠 AI Capabilities
-
-### Natural Language Processing (NLP)
 ```mermaid
-flowchart LR
-    TEXT[Input Text] --> TOKENIZE[Tokenization]
-    TOKENIZE --> EMBED[Embeddings]
-    EMBED --> MODEL[AI Model]
-    MODEL --> SENTIMENT[Sentiment Analysis]
-    MODEL --> SUMMARY[Text Summarization]
-    MODEL --> CLASSIFY[Classification]
-    MODEL --> GENERATE[Text Generation]
-    MODEL --> TRANSLATE[Translation]
+sequenceDiagram
+    participant UI as React Frontend
+    participant API as Node.js Gateway
+    participant Rust as Rust Core
+    participant AI as Python AI Service
+    participant Gemini as Gemini API
+    participant DB as Database
+    
+    UI->>API: AI Request (WebSocket)
+    API->>Rust: Validate & Route
+    Rust->>AI: Process Request
+    
+    alt Gemini API Request
+        AI->>Gemini: NLP Processing
+        Gemini-->>AI: AI Response
+    else Custom Model
+        AI->>AI: Local Inference
+    end
+    
+    AI-->>Rust: Processing Result
+    Rust->>DB: Store Result
+    Rust-->>API: Success Response
+    API-->>UI: Real-time Update
+    
+    Note over UI,DB: All communication is type-safe<br/>and follows REST/WebSocket standards
 ```
 
-**Available Models:**
-- **Sentiment Analysis** - Real-time emotion detection
-- **Text Summarization** - Automatic content summarization
-- **Language Translation** - 50+ language support
-- **Named Entity Recognition** - Extract entities from text
-- **Question Answering** - Intelligent Q&A systems
-- **Text Classification** - Custom category classification
-- **Chatbot Engine** - Conversational AI
+## 🏗️ Project Structure
 
-### Computer Vision
-```mermaid
-flowchart TB
-    IMAGE[Input Image/Video] --> PREPROCESS[Preprocessing]
-    PREPROCESS --> DETECT[Object Detection]
-    PREPROCESS --> CLASSIFY[Image Classification]
-    PREPROCESS --> SEGMENT[Image Segmentation]
-    PREPROCESS --> FACE[Facial Recognition]
-    PREPROCESS --> OCR[Text Extraction]
-    
-    DETECT --> RESULTS[Detection Results]
-    CLASSIFY --> RESULTS
-    SEGMENT --> RESULTS
-    FACE --> RESULTS
-    OCR --> RESULTS
+```
+AI-Powered-BAAS/
+├── 🦀 rust-core/                    # Rust backend services (MAIN LANGUAGE)
+│   ├── src/main.rs                 # Axum web server
+│   ├── Cargo.toml                  # Rust dependencies
+│   └── README.md                   # Rust service docs
+├── ⚛️ frontend/                     # React + TypeScript UI
+│   ├── src/
+│   │   ├── components/             # Reusable UI components
+│   │   ├── pages/                  # Application pages
+│   │   ├── hooks/                  # Custom React hooks
+│   │   ├── types/                  # TypeScript type definitions
+│   │   └── utils/                  # Utility functions
+│   ├── tailwind.config.js          # Tailwind CSS configuration
+│   └── tsconfig.json               # TypeScript configuration
+├── 🟢 src/                         # Node.js API Gateway
+│   └── index.js                    # Express + Socket.io server
+├── 🐍 ai-services/                 # Python AI services
+│   ├── main.py                     # FastAPI with Gemini integration
+│   ├── mock_service.py             # Development mock service
+│   └── requirements.txt            # Python dependencies
+├── 📓 notebooks/                   # Jupyter notebooks
+│   └── ai_model_training.ipynb     # Custom model training
+├── 🐳 docker/                      # Docker configurations
+├── ☸️ kubernetes/                  # K8s deployment configs
+└── 📚 docs/                        # Documentation
 ```
 
-**Available Models:**
-- **Object Detection** - YOLO v8, SSD, R-CNN variants
-- **Image Classification** - ResNet, EfficientNet, Vision Transformers
-- **Facial Recognition** - Face detection, verification, identification
-- **OCR (Optical Character Recognition)** - Text extraction from images
-- **Image Segmentation** - Pixel-level object identification
-- **Style Transfer** - Artistic image transformation
-
-### Predictive Analytics
-- **Time Series Forecasting** - LSTM, ARIMA, Prophet models
-- **Anomaly Detection** - Isolation Forest, One-Class SVM
-- **Recommendation Systems** - Collaborative and content-based filtering
-- **Risk Assessment** - Credit scoring, fraud detection
-- **Demand Prediction** - Inventory and resource planning
-
-## 🏗️ Core Features
-
-### 🔐 Authentication & Security
-- **OAuth 2.0 / OpenID Connect** - Industry-standard authentication
-- **JWT Tokens** - Stateless authentication
-- **Multi-Factor Authentication (MFA)** - Enhanced security
-- **Role-Based Access Control (RBAC)** - Granular permissions
-- **API Key Management** - Secure API access
-- **Data Encryption** - AES-256 encryption at rest and in transit
-
-### 📊 Database Services
-```mermaid
-erDiagram
-    USER ||--o{ PROJECT : owns
-    PROJECT ||--o{ API_KEY : has
-    PROJECT ||--o{ AI_MODEL : uses
-    PROJECT ||--o{ FUNCTION : contains
-    API_KEY ||--o{ REQUEST_LOG : generates
-    AI_MODEL ||--o{ INFERENCE : performs
-    
-    USER {
-        string id PK
-        string email
-        string name
-        datetime created_at
-        json preferences
-    }
-    
-    PROJECT {
-        string id PK
-        string user_id FK
-        string name
-        string description
-        json config
-        datetime created_at
-    }
-    
-    AI_MODEL {
-        string id PK
-        string name
-        string type
-        string version
-        json parameters
-        boolean active
-    }
-```
-
-### ⚡ Serverless Functions
-- **Custom Business Logic** - Deploy your own functions
-- **Event-Driven Architecture** - Trigger-based execution
-- **Auto-Scaling** - Scales from zero to millions
-- **Multiple Runtimes** - Node.js, Python, Go support
-- **Environment Variables** - Secure configuration management
-
-### 🔄 Real-time Services
-- **WebSocket Connections** - Bi-directional communication
-- **Server-Sent Events** - Live data streaming
-- **Real-time Notifications** - Push notifications
-- **Live Collaboration** - Multi-user synchronization
-- **Event Broadcasting** - Pub/Sub messaging
-
-## 🚀 Quick Start
+## 🚀 Quick Start Guide
 
 ### Prerequisites
 ```bash
 # Required software
-- Node.js 18+ 
+- Rust 1.70+
+- Node.js 18+
 - Python 3.9+
-- Docker & Docker Compose
-- Git
+- Docker & Docker Compose (optional)
 ```
 
 ### 1. Clone and Setup
 ```bash
-# Clone the repository
-git clone https://github.com/your-username/AI-Powered-BAAS.git
+git clone https://github.com/Haggai-dev665/AI-Powered-BAAS.git
 cd AI-Powered-BAAS
 
-# Install dependencies
-npm install
-pip install -r requirements.txt
-
-# Setup environment variables
+# Copy environment configuration
 cp .env.example .env
-# Edit .env with your configuration
+# Edit .env with your Gemini API key and other settings
 ```
 
-### 2. Start Development Environment
+### 2. Start Services
+
+#### Option A: Development Mode (Individual Services)
+
+**Start Rust Core Service:**
 ```bash
-# Start all services with Docker Compose
-docker-compose up -d
-
-# Or start services individually
-npm run dev          # Start Node.js API server
-npm run start:ai     # Start Python AI services
-npm run start:web    # Start React frontend
+cd rust-core
+cargo run
+# Runs on http://localhost:8080
 ```
 
-### 3. Verify Installation
+**Start Python AI Service:**
 ```bash
-# Check API health
-curl http://localhost:3000/health
-
-# Test AI endpoint
-curl -X POST http://localhost:8000/ai/sentiment \
-  -H "Content-Type: application/json" \
-  -d '{"text": "I love this AI platform!"}'
+cd ai-services
+pip install -r requirements.txt
+python main.py
+# Runs on http://localhost:8000
 ```
 
-## 📚 API Documentation
-
-### Authentication
-```typescript
-// Get access token
-POST /auth/login
-{
-  "email": "user@example.com",
-  "password": "your-password"
-}
-
-// Response
-{
-  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
-  "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
-  "expires_in": 3600
-}
-```
-
-### AI Services Examples
-
-#### Sentiment Analysis
-```typescript
-POST /ai/sentiment
-Authorization: Bearer <your-token>
-Content-Type: application/json
-
-{
-  "text": "This product is amazing!",
-  "language": "en"
-}
-
-// Response
-{
-  "sentiment": "positive",
-  "confidence": 0.94,
-  "scores": {
-    "positive": 0.94,
-    "negative": 0.04,
-    "neutral": 0.02
-  }
-}
-```
-
-#### Object Detection
-```typescript
-POST /ai/vision/detect
-Authorization: Bearer <your-token>
-Content-Type: multipart/form-data
-
-{
-  "image": <file>,
-  "confidence_threshold": 0.5
-}
-
-// Response
-{
-  "objects": [
-    {
-      "class": "person",
-      "confidence": 0.87,
-      "bbox": [100, 150, 200, 400]
-    },
-    {
-      "class": "car",
-      "confidence": 0.93,
-      "bbox": [300, 200, 500, 350]
-    }
-  ]
-}
-```
-
-#### Text Generation
-```typescript
-POST /ai/text/generate
-Authorization: Bearer <your-token>
-Content-Type: application/json
-
-{
-  "prompt": "Write a product description for a smart watch",
-  "max_length": 100,
-  "temperature": 0.7
-}
-
-// Response
-{
-  "generated_text": "Introducing the next generation smart watch that seamlessly blends style with functionality...",
-  "model_used": "gpt-3.5-turbo",
-  "tokens_used": 87
-}
-```
-
-## 🛠️ SDK Examples
-
-### JavaScript/TypeScript SDK
-```typescript
-import { AIBaaSClient } from '@ai-baas/sdk';
-
-const client = new AIBaaSClient({
-  apiKey: 'your-api-key',
-  baseURL: 'https://api.aibaas.dev'
-});
-
-// Sentiment analysis
-const sentiment = await client.ai.sentiment({
-  text: "I love this service!"
-});
-
-// Object detection
-const detection = await client.ai.vision.detect({
-  imageUrl: "https://example.com/image.jpg"
-});
-
-// Real-time connection
-const socket = client.realtime.connect();
-socket.on('ai-result', (data) => {
-  console.log('AI processing complete:', data);
-});
-```
-
-### Python SDK
-```python
-from aibaas import AIBaaSClient
-
-client = AIBaaSClient(
-    api_key="your-api-key",
-    base_url="https://api.aibaas.dev"
-)
-
-# Text summarization
-summary = client.ai.summarize(
-    text="Your long text here...",
-    max_length=100
-)
-
-# Image classification
-classification = client.ai.vision.classify(
-    image_path="./image.jpg"
-)
-
-# Async processing
-async def process_batch():
-    results = await client.ai.batch_process(
-        tasks=[
-            {"type": "sentiment", "text": "Great product!"},
-            {"type": "translate", "text": "Hello", "target": "es"}
-        ]
-    )
-```
-
-## 🏢 Use Cases & Industries
-
-### E-commerce
-- **Product Recommendation** - Personalized shopping experiences
-- **Review Analysis** - Sentiment analysis of customer feedback
-- **Visual Search** - Find products using images
-- **Chatbot Support** - Automated customer service
-
-### Healthcare
-- **Medical Image Analysis** - Radiology and pathology assistance
-- **Symptom Checker** - AI-powered health assessments
-- **Drug Discovery** - Molecular analysis and prediction
-- **Patient Monitoring** - Real-time health data analysis
-
-### Finance
-- **Fraud Detection** - Real-time transaction monitoring
-- **Credit Scoring** - AI-powered risk assessment
-- **Algorithmic Trading** - Market prediction models
-- **Document Processing** - Automated form recognition
-
-### Education
-- **Content Generation** - Automated course material creation
-- **Student Assessment** - Intelligent grading systems
-- **Language Learning** - Pronunciation and grammar checking
-- **Plagiarism Detection** - Content originality verification
-
-## 📈 Pricing & Plans
-
-| Feature | Starter | Professional | Enterprise |
-|---------|---------|--------------|------------|
-| **AI API Calls** | 10K/month | 100K/month | Unlimited |
-| **Storage** | 1GB | 10GB | Unlimited |
-| **Custom Models** | ❌ | ✅ | ✅ |
-| **Priority Support** | ❌ | ✅ | ✅ |
-| **SLA** | 99.5% | 99.9% | 99.99% |
-| **Price** | Free | $99/month | Contact Us |
-
-### Usage-Based Pricing
-- **Text Processing**: $0.001 per 1K characters
-- **Image Processing**: $0.01 per image
-- **Model Training**: $0.10 per compute hour
-- **Storage**: $0.02 per GB/month
-- **Bandwidth**: $0.05 per GB
-
-## 🔧 Development & Deployment
-
-### Local Development
+**Start Node.js API Gateway:**
 ```bash
-# Development mode with hot reload
+npm install
 npm run dev
-
-# Run tests
-npm test
-python -m pytest tests/
-
-# Code formatting
-npm run format
-black . --line-length 88
-
-# Type checking
-npm run type-check
-mypy src/
+# Runs on http://localhost:3001
 ```
 
-### Production Deployment
+**Start React Frontend:**
+```bash
+cd frontend
+npm install
+npm start
+# Runs on http://localhost:3000
+```
 
-#### Docker Deployment
+#### Option B: Docker Compose (All Services)
+```bash
+docker-compose up -d
+```
+
+### 3. Access the Application
+
+- 🌐 **Frontend UI**: http://localhost:3000
+- 🔧 **API Gateway**: http://localhost:3001
+- 🦀 **Rust Core**: http://localhost:8080
+- 🤖 **AI Services**: http://localhost:8000
+
+## 🎯 Core Features
+
+### 🤖 **AI Capabilities**
+
+#### Natural Language Processing (Gemini API)
+```typescript
+// Text Generation
+const response = await aiService.generateText({
+  prompt: "Write a creative story about AI",
+  temperature: 0.7,
+  maxTokens: 500
+});
+
+// Sentiment Analysis
+const sentiment = await aiService.analyzeSentiment({
+  text: "I love this AI platform!"
+});
+
+// Text Summarization
+const summary = await aiService.summarize({
+  text: longText,
+  maxLength: 100
+});
+
+// Translation
+const translation = await aiService.translate({
+  text: "Hello world",
+  targetLanguage: "es"
+});
+```
+
+#### Custom Model Training (Jupyter Notebooks)
+```python
+# notebooks/ai_model_training.ipynb
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
+
+# Fine-tune custom models
+model = AutoModelForSequenceClassification.from_pretrained(
+    "distilbert-base-uncased",
+    num_labels=2
+)
+
+# Train on custom data
+trainer.train()
+
+# Deploy to production
+model.save_pretrained("./custom_sentiment_model")
+```
+
+### 🔐 **Real-time Features**
+```typescript
+// WebSocket connection
+const { connected, sendAIRequest, messages } = useWebSocket();
+
+// Real-time AI processing
+sendAIRequest({
+  type: 'sentiment',
+  payload: { text: userInput },
+  requestId: generateId()
+});
+
+// Listen for results
+useEffect(() => {
+  const latestMessage = messages[messages.length - 1];
+  if (latestMessage?.type === 'ai_result') {
+    setResult(latestMessage.data);
+  }
+}, [messages]);
+```
+
+### 🎨 **Advanced UI Components**
+
+```tsx
+// Modern React components with animations
+import { motion } from 'framer-motion';
+
+const AIPlayground: React.FC = () => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      className="card bg-white border border-gray-200"
+    >
+      <h2 className="text-gradient">AI Playground</h2>
+      {/* Interactive AI testing interface */}
+    </motion.div>
+  );
+};
+```
+
+## 🔧 Development Workflow
+
+### **Custom Model Training**
+
+1. **Create Training Data**:
+   ```python
+   # In Jupyter notebook
+   training_data = [
+       {"text": "Great product!", "label": 1},
+       {"text": "Poor quality", "label": 0}
+   ]
+   ```
+
+2. **Train Model**:
+   ```python
+   trainer = Trainer(
+       model=model,
+       train_dataset=train_dataset,
+       eval_dataset=val_dataset
+   )
+   trainer.train()
+   ```
+
+3. **Deploy to Service**:
+   ```python
+   # ai-services/main.py
+   custom_model = CustomSentimentModel("./custom_model")
+   
+   @app.post("/ai/custom/sentiment")
+   async def custom_sentiment(request: SentimentRequest):
+       return custom_model.predict(request.text)
+   ```
+
+### **API Integration**
+
+```typescript
+// Frontend API calls
+import { generateText, analyzeSentiment } from './utils/api';
+
+// Generate text with Gemini
+const result = await generateText(
+  "Write a technical blog post about AI",
+  { temperature: 0.8 }
+);
+
+// Analyze sentiment
+const sentiment = await analyzeSentiment(
+  "This platform is incredible!"
+);
+```
+
+## 📱 User Interface Screenshots
+
+### Dashboard Overview
+![AI-Powered BaaS Dashboard](docs/screenshots/dashboard.png)
+*Modern dashboard featuring white/black color scheme with system status, AI models, and technology stack overview. Built with React TypeScript and Tailwind CSS.*
+
+### AI Playground Interface
+![AI Playground](docs/screenshots/playground.png)
+*Interactive AI testing interface with real-time processing capabilities. Features text generation, sentiment analysis, summarization, and translation powered by Gemini API.*
+
+### Projects Management
+![Projects Management](docs/screenshots/projects.png)
+*Comprehensive project management interface showing AI-powered applications with model configurations, deployment status, and project statistics.*
+
+## 🧪 Testing
+
+### **Unit Tests**
+```bash
+# Rust tests
+cd rust-core && cargo test
+
+# Node.js tests
+npm test
+
+# Python tests
+cd ai-services && pytest
+
+# Frontend tests
+cd frontend && npm test
+```
+
+### **Integration Tests**
+```bash
+# Test all services together
+docker-compose -f docker-compose.test.yml up
+```
+
+## 🚀 Deployment
+
+### **Production Environment Variables**
+
+```bash
+# .env.production
+DATABASE_URL=postgresql://user:pass@db:5432/aibaas_prod
+REDIS_URL=redis://redis:6379
+GEMINI_API_KEY=your_production_gemini_key
+NODE_ENV=production
+RUST_LOG=warn
+```
+
+### **Docker Deployment**
 ```bash
 # Build production images
-docker build -t aibaas-api .
-docker build -t aibaas-ai ./ai-services
+docker build -t aibaas-rust ./rust-core
+docker build -t aibaas-node .
+docker build -t aibaas-python ./ai-services
+docker build -t aibaas-frontend ./frontend
 
-# Deploy with Docker Compose
+# Deploy with compose
 docker-compose -f docker-compose.prod.yml up -d
 ```
 
-#### Kubernetes Deployment
-```yaml
-# kubernetes/deployment.yaml
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: aibaas-api
-spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      app: aibaas-api
-  template:
-    metadata:
-      labels:
-        app: aibaas-api
-    spec:
-      containers:
-      - name: api
-        image: aibaas-api:latest
-        ports:
-        - containerPort: 3000
-        env:
-        - name: DATABASE_URL
-          valueFrom:
-            secretKeyRef:
-              name: aibaas-secrets
-              key: database-url
-```
-
-### CI/CD Pipeline
-```yaml
-# .github/workflows/deploy.yml
-name: Deploy to Production
-on:
-  push:
-    branches: [main]
-
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Run tests
-        run: |
-          npm test
-          python -m pytest
-  
-  deploy:
-    needs: test
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to Kubernetes
-        run: |
-          kubectl apply -f kubernetes/
+### **Kubernetes Deployment**
+```bash
+kubectl apply -f kubernetes/
 ```
 
 ## 🔍 Monitoring & Observability
 
-### Performance Metrics
-```mermaid
-dashboard "AI BaaS Monitoring"
-    time_range "Last 24 hours"
-    
-    graph "API Response Time" {
-        metric "avg_response_time"
-        unit "ms"
-        target 200
-    }
-    
-    graph "AI Model Accuracy" {
-        metric "model_accuracy"
-        unit "%"
-        target 95
-    }
-    
-    graph "System Resource Usage" {
-        metric "cpu_usage"
-        metric "memory_usage"
-        metric "gpu_usage"
-        unit "%"
-    }
+### **Health Checks**
+```bash
+# Check all services
+curl http://localhost:3001/health
+
+# Individual service health
+curl http://localhost:8080/health  # Rust
+curl http://localhost:8000/health  # Python
 ```
 
-### Health Checks
-```typescript
-// Health endpoint
-GET /health
+### **Metrics Dashboard**
+- **Prometheus**: Model inference metrics
+- **Grafana**: Performance visualization
+- **Logging**: Structured logging across all services
 
-// Response
-{
-  "status": "healthy",
-  "timestamp": "2025-05-29T10:30:00Z",
-  "services": {
-    "database": "healthy",
-    "redis": "healthy",
-    "ai_services": "healthy",
-    "storage": "healthy"
-  },
-  "metrics": {
-    "uptime": 3600,
-    "requests_per_minute": 150,
-    "average_response_time": 185
-  }
-}
-```
+## 🎯 Key Features Implemented
+
+### ✅ **Rust Core Services**
+- Axum-based REST API server
+- WebSocket support for real-time features
+- Type-safe request/response handling
+- Async/await with Tokio runtime
+- Redis integration for caching
+
+### ✅ **React + TypeScript Frontend**
+- Modern component-based architecture
+- Tailwind CSS with custom white/black theme
+- Framer Motion animations
+- Real-time WebSocket integration
+- Responsive design for all devices
+
+### ✅ **Node.js API Gateway**
+- Express.js middleware layer
+- Socket.io for WebSocket management
+- Request routing to backend services
+- CORS handling and security
+
+### ✅ **Python AI Services**
+- FastAPI framework for high performance
+- Gemini API integration for NLP
+- Mock service for development
+- Extensible architecture for custom models
+
+### ✅ **Jupyter Notebooks**
+- Complete model training pipeline
+- Transformer fine-tuning examples
+- Integration code for deployment
+- Performance monitoring setup
 
 ## 🤝 Contributing
 
-We welcome contributions from the community! Please read our [Contributing Guide](CONTRIBUTING.md) for details on our development process.
-
-### Development Setup
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Make your changes
-4. Add tests for your changes
-5. Ensure all tests pass
-6. Commit your changes (`git commit -m 'Add amazing feature'`)
-7. Push to your branch (`git push origin feature/amazing-feature`)
-8. Open a Pull Request
-
-### Code Style
-- **JavaScript/TypeScript**: ESLint + Prettier
-- **Python**: Black + isort + flake8
-- **Documentation**: Markdown with proper formatting
+1. **Fork the repository**
+2. **Create feature branch**: `git checkout -b feature/amazing-ai-feature`
+3. **Follow our coding standards**:
+   - **Rust**: `cargo fmt && cargo clippy`
+   - **TypeScript**: `npm run lint && npm run type-check`
+   - **Python**: `black . && flake8`
+4. **Add tests for new features**
+5. **Submit pull request**
 
 ## 📝 License
 
@@ -812,38 +522,20 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🆘 Support & Community
 
-- **Documentation**: [https://docs.aibaas.dev](https://docs.aibaas.dev)
-- **Discord Community**: [Join our Discord](https://discord.gg/aibaas)
-- **GitHub Discussions**: [Ask questions](https://github.com/your-username/AI-Powered-BAAS/discussions)
-- **Email Support**: support@aibaas.dev
-- **Status Page**: [https://status.aibaas.dev](https://status.aibaas.dev)
-
-## 🎯 Roadmap
-
-### Q2 2025
-- [ ] Advanced NLP models (GPT-4, Claude integration)
-- [ ] Real-time video processing
-- [ ] Custom model training platform
-- [ ] Mobile SDK release
-
-### Q3 2025
-- [ ] Multi-modal AI (text + image processing)
-- [ ] Advanced analytics dashboard
-- [ ] Enterprise SSO integration
-- [ ] Global CDN deployment
-
-### Q4 2025
-- [ ] Edge computing support
-- [ ] Blockchain integration
-- [ ] Advanced security features
-- [ ] Industry-specific templates
+- **Documentation**: [Full Documentation](docs/)
+- **Issues**: [GitHub Issues](https://github.com/Haggai-dev665/AI-Powered-BAAS/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/Haggai-dev665/AI-Powered-BAAS/discussions)
 
 ---
 
 <div align="center">
 
-**Built with ❤️ by the AI BaaS Team**
+**🚀 Built with Rust, React+TypeScript, Node.js & Python**
 
-[Website](https://aibaas.dev) • [Documentation](https://docs.aibaas.dev) • [Blog](https://blog.aibaas.dev) • [Twitter](https://twitter.com/aibaas)
+**🤖 Powered by Gemini API & Custom AI Models**
+
+**⚡ Production-Ready • Scalable • Developer-Friendly**
+
+![Architecture](https://via.placeholder.com/600x200/ffffff/000000?text=Modern+AI-First+Architecture)
 
 </div>

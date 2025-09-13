@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered BaaS - Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #000000 0%, #374151 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <i data-lucide="cpu" class="h-8 w-8 text-black"></i>
+                    <span class="text-xl font-bold gradient-text">AI-Powered BaaS</span>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#" class="flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-black hover:bg-gray-100">
+                        <i data-lucide="rocket" class="h-5 w-5"></i>
+                        <span>Dashboard</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-black hover:bg-gray-100">
+                        <i data-lucide="flask-conical" class="h-5 w-5"></i>
+                        <span>AI Playground</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium bg-black text-white">
+                        <i data-lucide="terminal" class="h-5 w-5"></i>
+                        <span>Projects</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Header -->
+        <div class="flex justify-between items-center mb-12">
+            <div>
+                <h1 class="text-4xl font-bold gradient-text mb-4">Projects</h1>
+                <p class="text-xl text-gray-600">
+                    Manage your AI-powered applications and services
+                </p>
+            </div>
+            <button class="px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors duration-200 font-medium flex items-center space-x-2">
+                <i data-lucide="plus" class="h-5 w-5"></i>
+                <span>New Project</span>
+            </button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Project 1 -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-lg transition-shadow duration-200 group cursor-pointer">
+                <div class="flex items-start justify-between mb-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="p-2 bg-gray-100 rounded-lg">
+                            <i data-lucide="folder" class="h-6 w-6 text-black"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-black group-hover:text-gray-700 transition-colors">
+                                E-commerce AI Assistant
+                            </h3>
+                            <p class="text-sm text-gray-600">Created Dec 10, 2024</p>
+                        </div>
+                    </div>
+                    <i data-lucide="chevron-right" class="h-5 w-5 text-gray-400 group-hover:text-gray-600 transition-colors"></i>
+                </div>
+
+                <p class="text-gray-700 mb-4 line-clamp-2">
+                    AI-powered customer service chatbot with sentiment analysis and product recommendations for online retail platform.
+                </p>
+
+                <div class="space-y-3">
+                    <div>
+                        <h4 class="text-sm font-medium text-gray-800 mb-2">AI Models</h4>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-800 rounded text-xs flex items-center space-x-1">
+                                <i data-lucide="cpu" class="h-3 w-3"></i>
+                                <span>gemini-pro</span>
+                            </span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-800 rounded text-xs flex items-center space-x-1">
+                                <i data-lucide="cpu" class="h-3 w-3"></i>
+                                <span>custom-classifier</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between text-sm text-gray-600">
+                        <div class="flex items-center space-x-1">
+                            <i data-lucide="calendar" class="h-4 w-4"></i>
+                            <span>Updated Dec 12, 2024</span>
+                        </div>
+                        <div class="flex items-center space-x-1">
+                            <div class="h-2 w-2 bg-green-500 rounded-full"></div>
+                            <span>Active</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-lg transition-shadow duration-200 group cursor-pointer">
+                <div class="flex items-start justify-between mb-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="p-2 bg-gray-100 rounded-lg">
+                            <i data-lucide="folder" class="h-6 w-6 text-black"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-black group-hover:text-gray-700 transition-colors">
+                                Content Moderation System
+                            </h3>
+                            <p class="text-sm text-gray-600">Created Dec 8, 2024</p>
+                        </div>
+                    </div>
+                    <i data-lucide="chevron-right" class="h-5 w-5 text-gray-400 group-hover:text-gray-600 transition-colors"></i>
+                </div>
+
+                <p class="text-gray-700 mb-4 line-clamp-2">
+                    Real-time content moderation with toxicity detection, sentiment analysis, and automated flagging for social media platform.
+                </p>
+
+                <div class="space-y-3">
+                    <div>
+                        <h4 class="text-sm font-medium text-gray-800 mb-2">AI Models</h4>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-800 rounded text-xs flex items-center space-x-1">
+                                <i data-lucide="cpu" class="h-3 w-3"></i>
+                                <span>gemini-pro</span>
+                            </span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-800 rounded text-xs flex items-center space-x-1">
+                                <i data-lucide="cpu" class="h-3 w-3"></i>
+                                <span>toxicity-detector</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between text-sm text-gray-600">
+                        <div class="flex items-center space-x-1">
+                            <i data-lucide="calendar" class="h-4 w-4"></i>
+                            <span>Updated Dec 11, 2024</span>
+                        </div>
+                        <div class="flex items-center space-x-1">
+                            <div class="h-2 w-2 bg-green-500 rounded-full"></div>
+                            <span>Active</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-lg transition-shadow duration-200 group cursor-pointer">
+                <div class="flex items-start justify-between mb-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="p-2 bg-gray-100 rounded-lg">
+                            <i data-lucide="folder" class="h-6 w-6 text-black"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-black group-hover:text-gray-700 transition-colors">
+                                News Summarization API
+                            </h3>
+                            <p class="text-sm text-gray-600">Created Dec 5, 2024</p>
+                        </div>
+                    </div>
+                    <i data-lucide="chevron-right" class="h-5 w-5 text-gray-400 group-hover:text-gray-600 transition-colors"></i>
+                </div>
+
+                <p class="text-gray-700 mb-4 line-clamp-2">
+                    Automated news article summarization service with key point extraction and category classification for news aggregation platform.
+                </p>
+
+                <div class="space-y-3">
+                    <div>
+                        <h4 class="text-sm font-medium text-gray-800 mb-2">AI Models</h4>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-800 rounded text-xs flex items-center space-x-1">
+                                <i data-lucide="cpu" class="h-3 w-3"></i>
+                                <span>gemini-pro</span>
+                            </span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-800 rounded text-xs flex items-center space-x-1">
+                                <i data-lucide="cpu" class="h-3 w-3"></i>
+                                <span>summarizer-v2</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between text-sm text-gray-600">
+                        <div class="flex items-center space-x-1">
+                            <i data-lucide="calendar" class="h-4 w-4"></i>
+                            <span>Updated Dec 9, 2024</span>
+                        </div>
+                        <div class="flex items-center space-x-1">
+                            <div class="h-2 w-2 bg-yellow-500 rounded-full"></div>
+                            <span>Development</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-lg transition-shadow duration-200 group cursor-pointer">
+                <div class="flex items-start justify-between mb-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="p-2 bg-gray-100 rounded-lg">
+                            <i data-lucide="folder" class="h-6 w-6 text-black"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-black group-hover:text-gray-700 transition-colors">
+                                Multilingual Translator
+                            </h3>
+                            <p class="text-sm text-gray-600">Created Dec 3, 2024</p>
+                        </div>
+                    </div>
+                    <i data-lucide="chevron-right" class="h-5 w-5 text-gray-400 group-hover:text-gray-600 transition-colors"></i>
+                </div>
+
+                <p class="text-gray-700 mb-4 line-clamp-2">
+                    Real-time translation service supporting 50+ languages with context-aware translations for global communication platform.
+                </p>
+
+                <div class="space-y-3">
+                    <div>
+                        <h4 class="text-sm font-medium text-gray-800 mb-2">AI Models</h4>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-800 rounded text-xs flex items-center space-x-1">
+                                <i data-lucide="cpu" class="h-3 w-3"></i>
+                                <span>gemini-pro</span>
+                            </span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-800 rounded text-xs flex items-center space-x-1">
+                                <i data-lucide="cpu" class="h-3 w-3"></i>
+                                <span>translate-multilingual</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between text-sm text-gray-600">
+                        <div class="flex items-center space-x-1">
+                            <i data-lucide="calendar" class="h-4 w-4"></i>
+                            <span>Updated Dec 7, 2024</span>
+                        </div>
+                        <div class="flex items-center space-x-1">
+                            <div class="h-2 w-2 bg-green-500 rounded-full"></div>
+                            <span>Active</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-lg transition-shadow duration-200 group cursor-pointer">
+                <div class="flex items-start justify-between mb-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="p-2 bg-gray-100 rounded-lg">
+                            <i data-lucide="folder" class="h-6 w-6 text-black"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-black group-hover:text-gray-700 transition-colors">
+                                Document Intelligence
+                            </h3>
+                            <p class="text-sm text-gray-600">Created Nov 28, 2024</p>
+                        </div>
+                    </div>
+                    <i data-lucide="chevron-right" class="h-5 w-5 text-gray-400 group-hover:text-gray-600 transition-colors"></i>
+                </div>
+
+                <p class="text-gray-700 mb-4 line-clamp-2">
+                    Intelligent document processing with OCR, entity extraction, and automated data classification for enterprise document management.
+                </p>
+
+                <div class="space-y-3">
+                    <div>
+                        <h4 class="text-sm font-medium text-gray-800 mb-2">AI Models</h4>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-800 rounded text-xs flex items-center space-x-1">
+                                <i data-lucide="cpu" class="h-3 w-3"></i>
+                                <span>gemini-pro</span>
+                            </span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-800 rounded text-xs flex items-center space-x-1">
+                                <i data-lucide="cpu" class="h-3 w-3"></i>
+                                <span>ocr-advanced</span>
+                            </span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-800 rounded text-xs flex items-center space-x-1">
+                                <i data-lucide="cpu" class="h-3 w-3"></i>
+                                <span>entity-extractor</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between text-sm text-gray-600">
+                        <div class="flex items-center space-x-1">
+                            <i data-lucide="calendar" class="h-4 w-4"></i>
+                            <span>Updated Dec 1, 2024</span>
+                        </div>
+                        <div class="flex items-center space-x-1">
+                            <div class="h-2 w-2 bg-green-500 rounded-full"></div>
+                            <span>Active</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-lg transition-shadow duration-200 group cursor-pointer">
+                <div class="flex items-start justify-between mb-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="p-2 bg-gray-100 rounded-lg">
+                            <i data-lucide="folder" class="h-6 w-6 text-black"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-black group-hover:text-gray-700 transition-colors">
+                                Smart Analytics Dashboard
+                            </h3>
+                            <p class="text-sm text-gray-600">Created Nov 25, 2024</p>
+                        </div>
+                    </div>
+                    <i data-lucide="chevron-right" class="h-5 w-5 text-gray-400 group-hover:text-gray-600 transition-colors"></i>
+                </div>
+
+                <p class="text-gray-700 mb-4 line-clamp-2">
+                    AI-powered business intelligence platform with predictive analytics, trend analysis, and automated insights generation.
+                </p>
+
+                <div class="space-y-3">
+                    <div>
+                        <h4 class="text-sm font-medium text-gray-800 mb-2">AI Models</h4>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-800 rounded text-xs flex items-center space-x-1">
+                                <i data-lucide="cpu" class="h-3 w-3"></i>
+                                <span>gemini-pro</span>
+                            </span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-800 rounded text-xs flex items-center space-x-1">
+                                <i data-lucide="cpu" class="h-3 w-3"></i>
+                                <span>forecasting-v3</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between text-sm text-gray-600">
+                        <div class="flex items-center space-x-1">
+                            <i data-lucide="calendar" class="h-4 w-4"></i>
+                            <span>Updated Nov 30, 2024</span>
+                        </div>
+                        <div class="flex items-center space-x-1">
+                            <div class="h-2 w-2 bg-blue-500 rounded-full"></div>
+                            <span>Testing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="mt-16">
+            <h2 class="text-3xl font-bold text-black mb-8 text-center">Project Statistics</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 text-center">
+                    <div class="text-3xl font-bold text-black mb-2">6</div>
+                    <div class="text-gray-600">Total Projects</div>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 text-center">
+                    <div class="text-3xl font-bold text-green-600 mb-2">4</div>
+                    <div class="text-gray-600">Active Projects</div>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 text-center">
+                    <div class="text-3xl font-bold text-blue-600 mb-2">12</div>
+                    <div class="text-gray-600">AI Models Used</div>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 text-center">
+                    <div class="text-3xl font-bold text-purple-600 mb-2">2.4M</div>
+                    <div class="text-gray-600">API Requests/Month</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="text-center">
+                <h3 class="text-lg font-bold mb-4">AI-Powered BaaS Projects</h3>
+                <p class="text-gray-300 mb-4">
+                    Build, deploy, and scale AI applications with ease
+                </p>
+                <div class="flex items-center justify-center space-x-4">
+                    <span class="text-sm text-gray-400">Features:</span>
+                    <div class="flex space-x-2">
+                        <span class="px-2 py-1 bg-gray-800 rounded text-xs">Auto-scaling</span>
+                        <span class="px-2 py-1 bg-gray-800 rounded text-xs">Real-time monitoring</span>
+                        <span class="px-2 py-1 bg-gray-800 rounded text-xs">Multi-model support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+    </script>
+</body>
+</html>
