@@ -73,26 +73,25 @@ const Dashboard: React.FC = () => {
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-screen">
-        <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-primary-900"></div>
+        <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600"></div>
       </div>
     );
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div className="p-6 space-y-6">
       {/* Hero Section */}
       <motion.div 
-        className="text-center mb-16"
+        className="text-center mb-12"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <h1 className="text-5xl font-bold text-gradient mb-6">
-          AI-Powered Backend as a Service
+        <h1 className="text-4xl font-bold text-gradient mb-4">
+          Welcome to AI-Powered BaaS
         </h1>
-        <p className="text-xl text-primary-600 mb-8 max-w-3xl mx-auto">
-          The first truly AI-native BaaS platform built with Rust, React TypeScript, Node.js, and Python.
-          Featuring native Gemini API integration and custom model training capabilities.
+        <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
+          Manage your AI-native backend services with real-time monitoring and analytics.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <motion.button 
@@ -101,7 +100,7 @@ const Dashboard: React.FC = () => {
             whileTap={{ scale: 0.95 }}
           >
             <RocketLaunchIcon className="h-5 w-5" />
-            <span>Get Started</span>
+            <span>Quick Start</span>
           </motion.button>
           <motion.button 
             className="btn-secondary inline-flex items-center space-x-2"
@@ -109,19 +108,19 @@ const Dashboard: React.FC = () => {
             whileTap={{ scale: 0.95 }}
           >
             <ChartBarIcon className="h-5 w-5" />
-            <span>View Documentation</span>
+            <span>View Analytics</span>
           </motion.button>
         </div>
       </motion.div>
 
       {/* System Status */}
       <motion.div 
-        className="mb-12"
+        className="mb-8"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
-        <h2 className="text-3xl font-bold text-primary-900 mb-8 text-center">System Status</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">System Status</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* WebSocket Status */}
           <div className="card">
@@ -139,8 +138,8 @@ const Dashboard: React.FC = () => {
             <div key={service} className="card">
               <div className="flex items-center justify-between">
                 <div>
-                  <h3 className="font-semibold text-primary-900 capitalize">{service.replace('_', ' ')}</h3>
-                  <p className="text-primary-600 capitalize">{status}</p>
+                  <h3 className="font-semibold text-gray-900 capitalize">{service.replace('_', ' ')}</h3>
+                  <p className="text-gray-600 capitalize">{status}</p>
                 </div>
                 <div className={`h-3 w-3 rounded-full ${
                   status === 'healthy' ? 'bg-green-500' : 
@@ -154,12 +153,12 @@ const Dashboard: React.FC = () => {
 
       {/* Features Grid */}
       <motion.div 
-        className="mb-16"
+        className="mb-12"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.4 }}
       >
-        <h2 className="text-3xl font-bold text-primary-900 mb-8 text-center">Core Features</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">Core Features</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {features.map((feature, index) => {
             const Icon = feature.icon;
@@ -177,8 +176,8 @@ const Dashboard: React.FC = () => {
                     <Icon className="h-6 w-6" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-primary-900 mb-2">{feature.title}</h3>
-                    <p className="text-primary-600">{feature.description}</p>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
+                    <p className="text-gray-600">{feature.description}</p>
                   </div>
                 </div>
               </motion.div>
@@ -189,12 +188,12 @@ const Dashboard: React.FC = () => {
 
       {/* AI Models */}
       <motion.div 
-        className="mb-16"
+        className="mb-12"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.6 }}
       >
-        <h2 className="text-3xl font-bold text-primary-900 mb-8 text-center">Available AI Models</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-6">Available AI Models</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {aiModels.map((model, index) => (
             <motion.div 
@@ -205,19 +204,19 @@ const Dashboard: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.1 * index }}
             >
               <div className="flex items-center justify-between mb-3">
-                <h3 className="font-semibold text-primary-900">{model.name}</h3>
+                <h3 className="font-semibold text-gray-900">{model.name}</h3>
                 <span className={`px-2 py-1 rounded text-xs ${
                   model.status === 'available' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
                 }`}>
                   {model.status || 'Unknown'}
                 </span>
               </div>
-              <p className="text-sm text-primary-600 mb-3">{model.provider}</p>
+              <p className="text-sm text-gray-600 mb-3">{model.provider}</p>
               <div className="flex flex-wrap gap-1">
                 {model.capabilities.map((capability) => (
                   <span 
                     key={capability} 
-                    className="px-2 py-1 bg-primary-100 text-primary-800 rounded text-xs"
+                    className="px-2 py-1 bg-gray-100 text-gray-800 rounded text-xs"
                   >
                     {capability}
                   </span>
@@ -231,12 +230,12 @@ const Dashboard: React.FC = () => {
       {/* Recent Activity */}
       {messages.length > 0 && (
         <motion.div 
-          className="mb-16"
+          className="mb-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
         >
-          <h2 className="text-3xl font-bold text-primary-900 mb-8 text-center">Recent Activity</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Recent Activity</h2>
           <div className="card max-h-96 overflow-y-auto">
             {messages.slice(-5).map((message, index) => (
               <div key={index} className="flex items-center space-x-3 py-2 border-b border-primary-200 last:border-b-0">

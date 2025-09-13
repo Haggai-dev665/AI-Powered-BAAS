@@ -1,123 +1,62 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Bars3Icon, 
-  XMarkIcon,
-  CpuChipIcon,
-  RocketLaunchIcon,
-  BeakerIcon,
-  CommandLineIcon
+  UserCircleIcon,
+  BellIcon,
+  MagnifyingGlassIcon,
+  Cog6ToothIcon
 } from '@heroicons/react/24/outline';
 
 const Header: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const location = useLocation();
-
-  const navigation = [
-    { name: 'Dashboard', href: '/dashboard', icon: RocketLaunchIcon },
-    { name: 'AI Playground', href: '/playground', icon: BeakerIcon },
-    { name: 'Projects', href: '/projects', icon: CommandLineIcon },
-  ];
-
-  const isActive = (path: string) => {
-    return location.pathname === path || (path === '/dashboard' && location.pathname === '/');
-  };
-
   return (
-    <header className="bg-white/80 backdrop-blur-sm border-b border-primary-200 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <motion.div 
-            className="flex items-center"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.2 }}
-          >
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="relative">
-                <CpuChipIcon className="h-8 w-8 text-primary-900" />
-                <div className="absolute inset-0 animate-pulse bg-primary-900 rounded-full opacity-20"></div>
-              </div>
-              <span className="text-xl font-bold text-gradient">
-                AI-Powered BaaS
-              </span>
-            </Link>
-          </motion.div>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
-            {navigation.map((item) => {
-              const Icon = item.icon;
-              return (
-                <motion.div
-                  key={item.name}
-                  whileHover={{ y: -2 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <Link
-                    to={item.href}
-                    className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
-                      isActive(item.href)
-                        ? 'bg-primary-900 text-white'
-                        : 'text-primary-700 hover:text-primary-900 hover:bg-primary-100'
-                    }`}
-                  >
-                    <Icon className="h-5 w-5" />
-                    <span>{item.name}</span>
-                  </Link>
-                </motion.div>
-              );
-            })}
-          </nav>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 rounded-md text-primary-700 hover:text-primary-900 hover:bg-primary-100 transition-colors duration-200"
-            >
-              {isMenuOpen ? (
-                <XMarkIcon className="h-6 w-6" />
-              ) : (
-                <Bars3Icon className="h-6 w-6" />
-              )}
-            </button>
+    <header className="bg-white border-b border-gray-200 px-6 py-4 shadow-sm">
+      <div className="flex items-center justify-between">
+        {/* Search */}
+        <div className="flex-1 max-w-2xl">
+          <div className="relative">
+            <MagnifyingGlassIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+            <input
+              type="text"
+              placeholder="Search services, APIs, databases..."
+              className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+            />
           </div>
         </div>
-      </div>
 
-      {/* Mobile Navigation */}
-      {isMenuOpen && (
-        <motion.div 
-          className="md:hidden"
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: 'auto' }}
-          exit={{ opacity: 0, height: 0 }}
-          transition={{ duration: 0.3 }}
-        >
-          <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-primary-200">
-            {navigation.map((item) => {
-              const Icon = item.icon;
-              return (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  onClick={() => setIsMenuOpen(false)}
-                  className={`flex items-center space-x-2 px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
-                    isActive(item.href)
-                      ? 'bg-primary-900 text-white'
-                      : 'text-primary-700 hover:text-primary-900 hover:bg-primary-100'
-                  }`}
-                >
-                  <Icon className="h-5 w-5" />
-                  <span>{item.name}</span>
-                </Link>
-              );
-            })}
-          </div>
-        </motion.div>
-      )}
+        {/* Right side actions */}
+        <div className="flex items-center space-x-4">
+          {/* Notifications */}
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="relative p-2 text-gray-400 hover:text-gray-600 transition-colors duration-200"
+          >
+            <BellIcon className="h-6 w-6" />
+            <span className="absolute top-1 right-1 h-2 w-2 bg-red-500 rounded-full animate-pulse"></span>
+          </motion.button>
+
+          {/* Settings */}
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="p-2 text-gray-400 hover:text-gray-600 transition-colors duration-200"
+          >
+            <Cog6ToothIcon className="h-6 w-6" />
+          </motion.button>
+
+          {/* User Profile */}
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="flex items-center space-x-3 cursor-pointer"
+          >
+            <div className="text-right">
+              <div className="text-sm font-medium text-gray-900">John Doe</div>
+              <div className="text-xs text-gray-500">Admin</div>
+            </div>
+            <UserCircleIcon className="h-8 w-8 text-gray-400" />
+          </motion.div>
+        </div>
+      </div>
     </header>
   );
 };
