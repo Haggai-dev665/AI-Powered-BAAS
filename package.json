@@ -64,6 +64,7 @@
     "axios": "^1.6.2",
     "bcryptjs": "^2.4.3",
     "bull": "^4.12.0",
+    "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "fastify": "^4.24.3",
@@ -74,6 +75,7 @@
     "jsonwebtoken": "^9.0.2",
     "kafkajs": "^2.2.4",
     "mongoose": "^8.0.0",
+    "morgan": "^1.10.1",
     "multer": "^1.4.5-lts.1",
     "nodemailer": "^6.9.7",
     "passport": "^0.7.0",
@@ -158,5 +160,4 @@
     "printWidth": 80,
     "tabWidth": 2
   }
-
 }

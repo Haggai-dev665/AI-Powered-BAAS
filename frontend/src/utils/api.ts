@@ -72,4 +72,89 @@ export const translateText = async (text: string, targetLanguage: string, source
   return response.data;
 };
 
+// Database Management
+export const getDatabases = async (): Promise<APIResponse<any>> => {
+  const response = await api.get('/api/v1/databases');
+  return response.data;
+};
+
+export const getDatabaseBackups = async (): Promise<APIResponse<any>> => {
+  const response = await api.get('/api/v1/databases/backups');
+  return response.data;
+};
+
+// Storage Management
+export const getStorageStats = async (): Promise<APIResponse<any>> => {
+  const response = await api.get('/api/v1/storage');
+  return response.data;
+};
+
+export const getStorageFiles = async (): Promise<APIResponse<any>> => {
+  const response = await api.get('/api/v1/storage/files');
+  return response.data;
+};
+
+// User Management
+export const getUsers = async (): Promise<APIResponse<any>> => {
+  const response = await api.get('/api/v1/users');
+  return response.data;
+};
+
+export const getUserRoles = async (): Promise<APIResponse<any>> => {
+  const response = await api.get('/api/v1/users/roles');
+  return response.data;
+};
+
+// Monitoring
+export const getMonitoringHealth = async (): Promise<APIResponse<any>> => {
+  const response = await api.get('/api/v1/monitoring/health');
+  return response.data;
+};
+
+export const getMonitoringLogs = async (): Promise<APIResponse<any>> => {
+  const response = await api.get('/api/v1/monitoring/logs');
+  return response.data;
+};
+
+// Communication
+export const getCommunicationStats = async (): Promise<APIResponse<any>> => {
+  const response = await api.get('/api/v1/communication/stats');
+  return response.data;
+};
+
+// Billing
+export const getBillingUsage = async (): Promise<APIResponse<any>> => {
+  const response = await api.get('/api/v1/billing/usage');
+  return response.data;
+};
+
+export const getBillingInvoices = async (): Promise<APIResponse<any>> => {
+  const response = await api.get('/api/v1/billing/invoices');
+  return response.data;
+};
+
+// Settings
+export const getSettings = async (): Promise<APIResponse<any>> => {
+  const response = await api.get('/api/v1/settings');
+  return response.data;
+};
+
+// AI Training
+export const getAITrainingJobs = async (): Promise<APIResponse<any>> => {
+  const response = await api.get('/api/v1/ai/training/jobs');
+  return response.data;
+};
+
+// Real-time Analytics
+export const getRealtimeAnalytics = async (): Promise<APIResponse<any>> => {
+  const response = await api.get('/api/v1/analytics/realtime');
+  return response.data;
+};
+
+// API Keys Management
+export const getAPIKeys = async (): Promise<APIResponse<any>> => {
+  const response = await api.get('/api/v1/api/keys');
+  return response.data;
+};
+
 export default api;
