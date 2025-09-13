@@ -157,20 +157,6 @@
     "singleQuote": true,
     "printWidth": 80,
     "tabWidth": 2
-  },
-  "eslintConfig": {
-    "extends": [
-      "eslint:recommended",
-      "@typescript-eslint/recommended",
-      "prettier"
-    ],
-    "parser": "@typescript-eslint/parser",
-    "plugins": [
-      "@typescript-eslint",
-      "prettier"
-    ],
-    "rules": {
-      "prettier/prettier": "error"
-    }
   }
+
 }
